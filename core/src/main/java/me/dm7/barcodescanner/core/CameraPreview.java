@@ -44,6 +44,7 @@ public class CameraPreview extends SurfaceView implements SurfaceHolder.Callback
         if(mCamera != null) {
             getHolder().addCallback(this);
             getHolder().setType(SurfaceHolder.SURFACE_TYPE_PUSH_BUFFERS);
+            getHolder().setFormat(PixelFormat.TRANSLUCENT);
             if(mPreviewing) {
                 requestLayout();
             } else {
